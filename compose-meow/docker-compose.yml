@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+    # Cells image with two named volumes for the static and for the data
+    cells:
+        image: 36bian/meow:1.0
+        restart: unless-stopped
+        volumes: ["meow:/root/.meow"] #修改配置文件后重启容器
+        ports: ["7777:7777"]
+        environment:
+            - hostip=${myip} # 修改成自己主机ip
+
+volumes:
+    meow: {}
