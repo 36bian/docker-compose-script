@@ -1,0 +1,31 @@
+version: '3'
+services:
+
+    # Cells image with two named volumes for the static and for the data
+    cells:
+        image: pydio/cells:latest
+        restart: unless-stopped
+        volumes: ["pydio:/root/.config"]
+        ports: ["8080:8080"]
+        environment:
+            - CELLS_BIND=0.0.0.0:8080
+            - CELLS_EXTERNAL=${ip或url}:8080 # 修改成自己的
+            - CELLS_NO_SSL=1
+        depends_on:
+            - mysql
+
+    # MySQL image with a default database cells and a dedicated user pydio
+    mysql:
+         image: mysql:5.7
+         restart: unless-stopped
+         volumes: ["mysql:/etc/mysql"]
+         environment:
+             MYSQL_ROOT_PASSWORD: 123456
+             MYSQL_DATABASE: cells
+             MYSQL_USER: pydio
+             MYSQL_PASSWORD: 123
+         command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci]
+         #ports: ["3306:3306"]
+
+volumes:
+    data: {}
