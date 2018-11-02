@@ -1,7 +1,5 @@
 version: '3'
 services:
-
-    # Cells image with two named volumes for the static and for the data
     cells:
         image: 36bian/meow:1.0
         restart: unless-stopped
