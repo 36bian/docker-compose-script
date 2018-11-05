@@ -1,11 +1,12 @@
 version: '2.0'
 
 services:
-  nginx:
+  frpc:
     restart: unless-stopped
-    image: nginx:1.11.6-alpine
-    ports:
-      - 80:80
-      - 443:443
+    image: 36bian/frpc:0.21
+    ports: ["7000:7000"]
     volumes:
-      - nginx:/etc/nginx/conf.d
+      - frpc:/root/config
+
+volumes:
+  frpc: {}
