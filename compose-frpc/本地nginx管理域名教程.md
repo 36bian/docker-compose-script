@@ -15,7 +15,7 @@ server_port = 7000
 
 [web]
 type = http
-local_ip = 宿主ip # 因为处在docker容器中所以这里要改一下
+local_ip = 宿主ip
 local_port = 80
 custom_domains = *.example.com
 ```
