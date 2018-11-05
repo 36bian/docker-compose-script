@@ -1,0 +1,11 @@
+version: '2.0'
+
+services:
+  nginx:
+    restart: unless-stopped
+    image: nginx:1.11.6-alpine
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - nginx:/etc/nginx/conf.d
