@@ -1,0 +1,12 @@
+version: '2.0'
+
+services:
+  chfs:
+    restart: unless-stopped
+    image: 36bian/chfs:1.4
+    ports: ["81:80"]
+    volumes:
+      - chfs:/root
+
+volumes:
+  chfs: {}
