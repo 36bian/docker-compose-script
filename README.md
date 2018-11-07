@@ -10,4 +10,4 @@ git clone 到本地，切进对应目录执行`docker-compose up -d`，执行前
 * meow：局域网代理
 * nginx：端口转发
 * 云盘
-  * pydio-cell，内存占用过高(1G)
+  * pydio-cell，界面简洁漂亮功能强大，但内存占用过高(1G)
