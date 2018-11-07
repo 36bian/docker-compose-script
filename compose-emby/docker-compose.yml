@@ -1,0 +1,13 @@
+version: '2.0'
+
+services:
+  emby:
+    restart: unless-stopped
+    image: emby/embyserver
+    ports:
+      - 8096:8096
+      - 8920:8920
+    volumes:
+      - ./config:/config
+      - /var/home/share:/mnt/share
+
