@@ -9,4 +9,4 @@ git clone 到本地，切进对应目录执行`docker-compose up -d`，执行前
 * nginx，端口转发
 * frpc，p2p穿透客户端，需配合服务端使用
 * 云盘
-  * pydio-cell，私有云,内存占用过高(1G)
+  * pydio-cell，内存占用过高(1G)
