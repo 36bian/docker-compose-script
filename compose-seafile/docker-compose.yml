@@ -7,6 +7,6 @@ services:
             -  /var/home/seafile-data:/shared
         ports: ["80:80"]
         environment:
-           #- SEAFILE_SERVER_HOSTNAME=seafile.example.com
+            - SEAFILE_SERVER_HOSTNAME=mydomin.com
             - SEAFILE_ADMIN_EMAIL=admin
             - SEAFILE_ADMIN_PASSWORD=admin
