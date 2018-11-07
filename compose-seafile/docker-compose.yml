@@ -1,0 +1,12 @@
+version: '3'
+services:
+    seafile:
+        image: seafileltd/seafile:latest
+        restart: unless-stopped
+        volumes: 
+            -  /var/home/seafile-data:/shared
+        ports: ["80:80"]
+        environment:
+           #- SEAFILE_SERVER_HOSTNAME=seafile.example.com
+            - SEAFILE_ADMIN_EMAIL=admin
+            - SEAFILE_ADMIN_PASSWORD=admin
