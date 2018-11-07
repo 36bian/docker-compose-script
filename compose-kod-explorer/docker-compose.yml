@@ -1,0 +1,10 @@
+version: '3'
+services:
+    kod-explorer:
+        image: 36bian/kod-explorer:4.36
+        restart: unless-stopped
+        volumes: ["kod-explorer:/KodExplorer/data"]
+        ports: ["80:80"]
+
+volumes:
+    kod-explorer: {}
