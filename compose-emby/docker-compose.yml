@@ -3,7 +3,7 @@ version: '2.0'
 services:
   emby:
     restart: unless-stopped
-    image: emby/embyserver
+    image: emby/embyserver:3.5.1.0
     ports:
       - 8096:8096
       - 8920:8920
